@@ -2,9 +2,13 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/cats">Cats</router-link> |
+      <router-link to="/dogs">Dogs</router-link>
+      <!-- |<router-link to="/pet">Pet</router-link>  We don't want to show this route directly instead we want to access it when our user clicks on a pet from the table -->
     </div>
-    <router-view/>
+    <div class="container">
+      <router-view />
+    </div>
   </div>
 </template>
 

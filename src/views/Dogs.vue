@@ -17,56 +17,24 @@
       <b-table-column field="color" label="Color" numeric v-slot="props" centered>
                 {{ props.row.color }}
       </b-table-column>
+      <b-table-column field="weight" label="Weight" numeric v-slot="props" centered>
+                {{ props.row.weight }}
+      </b-table-column>
      </b-table>
   </div>
 </template>
 
 <script>
-import dogs from '@/data/dogs'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Dogs',
   data () {
     return {
-      dogs,
-      columns: [
-        {
-          field: 'name',
-          label: 'Name',
-          width: '40'
-        },
-        {
-          field: 'breed',
-          label: 'Breed',
-          centered: true
-        },
-        {
-          field: 'gender',
-          label: 'Gender',
-          centered: true
-        },
-        {
-          field: 'age',
-          label: 'Age',
-          centered: true
-        },
-        {
-          field: 'color',
-          label: 'Color',
-          centered: true
-        },
-        {
-          field: 'weight',
-          label: 'Weight',
-          centered: true
-        },
-        {
-          field: 'location',
-          label: 'Location',
-          centered: true
-        }
-      ]
     }
+  },
+  computed: {
+    ...mapState(['dogs'])
   }
 }
 </script>

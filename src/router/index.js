@@ -15,7 +15,7 @@ const routes = [
   },
   {
     // path: '/pet',
-    path: '/pets/:id', // We pluralised it for the reason that we'll be looking for specific pet from all the pets and also the /:id url parameter cane be accesed through our route in our respective component.
+    path: '/pets/:species/:id', // We pluralised it for the reason that we'll be looking for specific pet from all the pets and also the /:id url parameter cane be accesed through our route in our respective component.
     name: 'Pet',
     component: Pet
   },

@@ -3,7 +3,7 @@
     <!-- <b-table :data="dogs" :columns="columns" hoverable striped></b-table> -->
     <b-table :data="dogs">
       <b-table-column field="name" label="Name" numeric v-slot="props">
-        <router-link :to="`/pets/${props.row.id}`">{{ props.row.name }}</router-link>
+        <router-link :to="`/pets/${props.row.species}/${props.row.id}`">{{ props.row.name }}</router-link>
       </b-table-column>
       <b-table-column field="breed" label="Breed" numeric v-slot="props" centered>
                 {{ props.row.breed }}
